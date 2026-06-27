@@ -1,0 +1,161 @@
+@import "/src/style.css";
+.detail-main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 40px 80px;
+}
+
+.back-link {
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #000000;
+  text-decoration: none;
+  margin-bottom: 40px;
+  transition: color 0.2s;
+  background-color: white;
+}
+.back-link:hover {
+  color: #877878;
+}
+
+.detail-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.detail-image-col {
+  position: sticky;
+  top: 100px;
+}
+.detail-img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: contain;
+  background: #f7f7f7;
+  display: block;
+}
+
+.detail-info-col {
+  padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.detail-category {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #aaa;
+}
+
+.detail-name {
+  font-size: 28px;
+  font-weight: 300;
+  color: #1a1a1a;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.detail-price {
+  font-size: 22px;
+  font-weight: 500;
+  color: #1a1a1a;
+  letter-spacing: -0.01em;
+}
+
+.detail-description {
+  font-size: 13px;
+  font-weight: 400;
+  color: #777;
+  line-height: 1.75;
+  letter-spacing: 0.01em;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 20px;
+}
+
+.detail-add-btn {
+  margin-top: 10px;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 18px;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: "Inter Tight", sans-serif;
+  transition: background 0.2s;
+}
+.detail-add-btn:hover {
+  background: #8b7355;
+}
+
+@media (max-width: 768px) {
+  .detail-main {
+    padding: 24px 20px 60px;
+  }
+
+  .detail-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .detail-image-col {
+    position: static;
+  }
+
+  .detail-img {
+    aspect-ratio: 1 / 1;
+  }
+
+  .detail-name {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .detail-main {
+    padding: 16px 16px 48px;
+  }
+
+  .detail-name {
+    font-size: 18px;
+  }
+
+  .detail-price {
+    font-size: 18px;
+  }
+
+  .detail-description {
+    font-size: 12px;
+  }
+
+  .detail-add-btn {
+    padding: 14px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 300px) {
+  .detail-main {
+    padding: 12px 10px 40px;
+  }
+
+  .detail-name {
+    font-size: 16px;
+  }
+
+  .detail-price {
+    font-size: 16px;
+  }
+
+  .back-link {
+    font-size: 9px;
+  }
+}

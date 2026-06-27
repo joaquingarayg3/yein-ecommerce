@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/public/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/src/pages/checkout/styles.css" />
+    <title>YEIN — Finalizar compra</title>
+  </head>
+  <body>
+    <header>
+      <div id="logocontainer">
+        <a href="/"
+          ><img
+            id="logoimg"
+            src="/public/Logo.png"
+            alt="Logo marca YEIN Outlet"
+        /></a>
+      </div>
+    </header>
+
+    <main class="checkout-main">
+      <div class="checkout-layout">
+        <div class="checkout-form-col">
+          <p class="checkout-section-label">Datos de envío</p>
+
+          <div class="field-group">
+            <div class="field">
+              <label for="nombre">Nombre completo</label>
+              <input type="text" id="nombre" placeholder="Ej: María López" />
+              <span class="field-error" id="error-nombre"></span>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Ej: maria@email.com"
+              />
+              <span class="field-error" id="error-email"></span>
+            </div>
+            <div class="field">
+              <label for="direccion">Dirección</label>
+              <input
+                type="text"
+                id="direccion"
+                placeholder="Ej: Av. Corrientes 1234"
+              />
+              <span class="field-error" id="error-direccion"></span>
+            </div>
+            <div class="field">
+              <label for="ciudad">Ciudad</label>
+              <input type="text" id="ciudad" placeholder="Ej: Buenos Aires" />
+              <span class="field-error" id="error-ciudad"></span>
+            </div>
+          </div>
+
+          <p class="checkout-section-label" style="margin-top: 40px">
+            Datos de pago
+          </p>
+
+          <div class="field-group">
+            <div class="field">
+              <label for="titular">Titular de la tarjeta</label>
+              <input type="text" id="titular" placeholder="Ej: MARIA LOPEZ" />
+              <span class="field-error" id="error-titular"></span>
+            </div>
+            <div class="field">
+              <label for="numero">Número de tarjeta</label>
+              <input
+                type="text"
+                id="numero"
+                placeholder="0000 0000 0000 0000"
+                maxlength="19"
+              />
+              <span class="field-error" id="error-numero"></span>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="vencimiento">Vencimiento</label>
+                <input
+                  type="text"
+                  id="vencimiento"
+                  placeholder="MM/AA"
+                  maxlength="5"
+                />
+                <span class="field-error" id="error-vencimiento"></span>
+              </div>
+              <div class="field">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" placeholder="000" maxlength="3" />
+                <span class="field-error" id="error-cvv"></span>
+              </div>
+            </div>
+          </div>
+
+          <button class="checkout-btn" id="checkout-btn">
+            CONFIRMAR COMPRA
+          </button>
+        </div>
+
+        <div class="checkout-summary-col">
+          <p class="checkout-section-label">Resumen</p>
+          <div class="summary-items" id="summary-items"></div>
+          <div class="summary-total-row">
+            <span class="summary-total-label">Total</span>
+            <span class="summary-total-amount" id="summary-total"></span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="success-overlay">
+      <div id="success-modal">
+        <div class="success-icon">✓</div>
+        <h2 class="success-title">¡Compra realizada!</h2>
+        <p class="success-sub">
+          Gracias por tu compra. Te enviaremos un email con los detalles.
+        </p>
+        <button class="success-btn" id="success-btn">VOLVER A LA TIENDA</button>
+      </div>
+    </div>
+    <footer>
+      <span class="footer-brand">YEIN</span>
+      <span class="footer-copy"
+        >© 2025 Yein Outlet. Todos los derechos reservados.</span
+      >
+      <nav class="footer-nav">
+        <a href="/">Inicio</a>
+        <a href="#">Contacto</a>
+        <a href="#">Instagram</a>
+      </nav>
+    </footer>
+    <script type="module" src="/src/pages/checkout/app.js"></script>
+  </body>
+</html>

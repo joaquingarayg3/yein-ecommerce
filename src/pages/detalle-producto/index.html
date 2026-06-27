@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/pages/detalle-producto/styles.css" />
+    <link rel="shortcut icon" href="/public/favicon.png" type="image/x-icon" />
+    <title>YEIN</title>
+  </head>
+  <body>
+    <header>
+      <div id="logocontainer">
+        <a href="/"
+          ><img
+            id="logoimg"
+            src="/public/Logo.png"
+            alt="Logo marca YEIN Outlet"
+        /></a>
+      </div>
+      <div class="searcharea">
+        <input id="searchbar" type="search" placeholder="Buscar productos..." />
+        <button class="searchbtn">
+          <img src="/public/lookicon.png" alt="Buscar" />
+        </button>
+      </div>
+      <div class="navigation">
+        <a href="">
+          <img
+            class="shopCart"
+            src="/public/carrito.png"
+            alt="Carrito de compras"
+          />
+        </a>
+        <span id="cart-count-page"></span>
+      </div>
+    </header>
+    <main class="detail-main"></main>
+    <div id="cart-overlay"></div>
+    <div id="cart-sidebar">
+      <div class="cart-header">
+        <div>
+          <div class="cart-title">Mi carrito</div>
+          <div class="cart-count" id="cart-count-label">0 productos</div>
+        </div>
+        <button
+          class="cart-close"
+          id="cart-close-btn"
+          aria-label="Cerrar carrito"
+        >
+          X
+        </button>
+      </div>
+
+      <div class="cart-items" id="cart-items-list"></div>
+
+      <div class="cart-footer">
+        <div class="cart-subtotal-row">
+          <span class="subtotal-label">Subtotal</span>
+          <span class="subtotal-amount" id="cart-total">$0</span>
+        </div>
+        <p class="cart-shipping-note">Envío calculado al finalizar la compra</p>
+        <button class="cart-checkout-btn">Finalizar compra</button>
+        <button class="cart-continue" id="cart-continue-btn">
+          Seguir comprando
+        </button>
+      </div>
+    </div>
+    <footer>
+      <span class="footer-brand">YEIN</span>
+      <span class="footer-copy"
+        >© 2025 Yein Outlet. Todos los derechos reservados.</span
+      >
+      <nav class="footer-nav">
+        <a href="/">Inicio</a>
+        <a href="#">Contacto</a>
+        <a href="#">Instagram</a>
+      </nav>
+    </footer>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
