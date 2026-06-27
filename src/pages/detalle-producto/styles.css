@@ -98,7 +98,7 @@
 
 @media (max-width: 768px) {
   .detail-main {
-    padding: 24px 20px 60px;
+    padding: 140px 20px 60px;
   }
 
   .detail-layout {
@@ -112,6 +112,7 @@
 
   .detail-img {
     aspect-ratio: 1 / 1;
+    max-height: 60vh;
   }
 
   .detail-name {
@@ -121,7 +122,7 @@
 
 @media (max-width: 480px) {
   .detail-main {
-    padding: 16px 16px 48px;
+    padding: 80px 16px 48px;
   }
 
   .detail-name {
@@ -144,7 +145,7 @@
 
 @media (max-width: 300px) {
   .detail-main {
-    padding: 12px 10px 40px;
+    padding: 16px 10px 40px;
   }
 
   .detail-name {
